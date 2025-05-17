@@ -1,0 +1,144 @@
+/* Header Styles */
+/* Add your existing header styles here */
+
+/* Footer Styles */
+.site-footer {
+    position: relative;
+    width: 100%;
+    background-color: #5C4033;
+    color: #fff;
+    padding: 60px 0 30px;
+    overflow: hidden;
+}
+
+.footer-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.1;
+}
+
+.footer-bg-logo {
+    width: 600px;
+    height: auto;
+}
+
+.footer-logo img {
+    width: 220px;
+    height: auto;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.footer-subscribe p {
+    margin-bottom: 15px;
+}
+
+.footer-subscribe a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.subscribe-form {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+}
+
+.footer-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #914800;
+}
+
+.footer-divider {
+    margin: 30px 0;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.copyright {
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-subscribe {
+        align-items: flex-start;
+        margin-top: 40px;
+    }
+    
+    .footer-links li {
+        width: 100%;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+    
+    .copyright {
+        margin-bottom: 15px;
+    }
+}

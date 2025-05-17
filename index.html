@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Additional Stylesheets -->
+    <link rel="stylesheet" href="./css/font-awesome-link.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <script>
+      // Opening animation
+      window.addEventListener('DOMContentLoaded', function () {
+        document.body.classList.add('opening-animation-active');
+      });
+      // Scroll animation
+      function revealOnScroll() {
+        var reveals = document.querySelectorAll('.animate-on-scroll');
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 100;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+          } else {
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+
+    <div class="header-section pb-5 opening-animation">
+        <div class="header-sections pb-4">
+            <!-- Mobile Header -->
+            <div class="mobile-header d-flex justify-content-between align-items-center px-3 py-2 d-md-none">
+                <a href="./index.html"><img src="./images/header-logo.png" alt="Logo" class="mobile-logo"></a>
+                <button class="menu-toggle" id="menuToggle">&#9776;</button>
+            </div>
+
+            <!-- Desktop Logo -->
+            <div class="header-logo text-center d-none d-md-block">
+                <a href="./index.html"><img src="./images/header-logo.png" alt=""></a>
+            </div>
+
+            <!-- Desktop Nav List -->
+            <div class="nav-list mt-3 d-none d-md-block">
+                <ul class="d-flex justify-content-center gap-4">
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./about-us.html">
+                        <li>About</li>
+                    </a>
+                    <a href="./products.html">
+                        <li>Products</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li>Contact</li>
+                    </a>
+                    <a href="./testimonials.html">
+                        <li>Testimonials</li>
+                    </a>
+                    <a href="./terms&condition.html">
+                        <li>Terms & Policies</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Side Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header d-flex justify-content-between align-items-center">
+                <a href="./index.html"><img src="./images/header-logo.png" alt="Logo" class="mobile-menu-logo">
+                    <button id="menuClose">&times;</button>
+            </div>
+            <ul class="mobile-menu-list">
+                <a href="./index.html">
+                    <li>Home</li>
+                </a>
+                <a href="./about-us.html">
+                    <li>About</li>
+                </a>
+                <a href="./products.html">
+                    <li>Products</li>
+                </a>
+                <a href="./contact.html">
+                    <li>Contact</li>
+                </a>
+                <a href="./testimonials.html">
+                    <li>Testimonials</li>
+                </a>
+                <a href="./terms&condition.html">
+                    <li>Terms & Policies</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="container mt-5 animate-on-scroll">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="hero-section">
+                        <img src="./images/Group 5.png" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-flex align-items-center">
+                    <div class="hero-text">
+                        <h1>handcrafted Wooden Treasures</h1>
+                        <p>Discover the natural beauty of our artisanal wooden home decor pieces, meticulously crafted
+                            to bring warmth and character to your spaces.</p>
+                        <a href=""><button>Get Started</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="slider-section section-bg animate-on-scroll">
+        <div class="slider-title">
+            <p class="text-center">Our Collection</p>
+        </div>
+        
+        <!-- Top slider (right to left) -->
+        <div class="slider-container">
+            <div class="slider-track right-to-left">
+                <!-- First set of images -->
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1763.png" alt="Product 1" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1781.png" alt="Product 2" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1819.png" alt="Product 3" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1837.png" alt="Product 4" />
+                </div>
+                
+                <!-- Duplicate set for seamless looping -->
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1763.png" alt="Product 1" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1781.png" alt="Product 2" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1819.png" alt="Product 3" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1837.png" alt="Product 4" />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom slider (left to right) -->
+        <div class="slider-container mt-5">
+            <div class="slider-track left-to-right">
+                <!-- First set of images -->
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1856.png" alt="Product 5" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1890.png" alt="Product 6" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/WhatsApp Image 2025-05-15 at 12.32.13_3df16d37.png" alt="Product 7" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/candle 2.png" alt="Product 8" />
+                </div>
+                
+                <!-- Duplicate set for seamless looping -->
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1856.png" alt="Product 5" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/0B5A1890.png" alt="Product 6" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/WhatsApp Image 2025-05-15 at 12.32.13_3df16d37.png" alt="Product 7" />
+                </div>
+                <div class="slider-item">
+                    <img src="./images/products/candle 2.png" alt="Product 8" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="who-asd-section">
+        <div class="container">
+            <div class="row" style="position: relative;">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="who-asd-text">
+                        <h3>who is Rooted by ASD</h3>
+                        <p class="mt-4">We are passionate artisans dedicated to the craft of woodworking. Each piece in
+                            our
+                            collection is thoughtfully designed and meticulously handcrafted using sustainably sourced
+                            wood.</p>
+                        <p class="mt-3">Our journey began with a simple love for natural materials and has grown into a
+                            mission to
+                            bring the warmth and character of wood into modern homes.</p>
+                        <a href="mt-3"><button>Learn More about us</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="who-asd-img">
+                        <img src="./images/about.png" alt="">
+                    </div>
+                </div>
+
+                <div class="text-box">
+                    <p>"Our hands shape the wood, but the wood shapes our passion."</p>
+                    <p class="mt-2">— Founder, Rooted by ASDs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="feature-product-section mt-5 mb-5">
+
+        <div class="container">
+            <div class="row row-gap">
+                <div class="col-lg-4 d-flex align-items-center">
+                    <div class="feature-product-text" style="width: 300px;">
+                        <h2>Featured Products</h2>
+                        <p>Explore our most popular handcrafted items, loved by our customers for their quality and
+                            design.</p>
+                        <a href=""><button>See more <span><i class="fa-solid fa-arrow-right"></i></span></button></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="product-images">
+                        <img src="./images/pro-1.png" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p class="product-name">Candles</p>
+                        <p class="product-rupees">₹ 2,000</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="product-images">
+                        <img src="./images/pro-2.png" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p class="product-name">Ashtray</p>
+                        <p class="product-rupees">₹ 2,000</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="product-images">
+                        <img src="./images/pro-3.png" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p class="product-name">Salad Bowl</p>
+                        <p class="product-rupees">₹ 6,500</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="product-images">
+                        <img src="./images/pro-3.png" alt="">
+                    </div>
+                    <div class="product-text">
+                        <p class="product-name">Dest Set</p>
+                        <p class="product-rupees">₹ 5000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="about-us section-bg">
+        <div class="about-tile journey-title">
+            <h3>What Do Customer Say About Us</h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="about-us-details-card">
+                        <div class="about-details d-flex gap-4 align-items-center">
+                            <img src="./images/Rectangle.png" alt="">
+                            <p>Vachika Bhanderi</p>
+                        </div>
+                        <div class="about-text">
+                            <p>“ Highly recommend this website for quality flowers and plants. Great prices, timely
+                                delivery and excellent customer service. ”</p>
+                        </div>
+                        <div class="about-bg-img">
+                            <img src="./images/Zz_Plant 1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="about-us-details-card">
+                        <div class="about-details d-flex gap-4 align-items-center">
+                            <img src="./images/Rectangle (1).png" alt="">
+                            <p>Disha Dhameliya</p>
+                        </div>
+                        <div class="about-text">
+                            <p>"Great service, beautiful flowers, timely delivery. Highly recommend."</p>
+                        </div>
+                        <div class="about-bg-img">
+                            <img src="./images/Snake_Plant 1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="about-us-details-card">
+                        <div class="about-details d-flex gap-4 align-items-center">
+                            <img src="./images/Rectangle (2).png" alt="">
+                            <p>Pratiksha Dabhi</p>
+                        </div>
+                        <div class="about-text">
+                            <p>"I am very happy with my purchase from this website, the plants were healthy and arrived
+                                on time.”</p>
+                        </div>
+                        <div class="about-bg-img">
+                            <img src="./images/Bamboo 258.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="about-us-details-card">
+                        <div class="about-details d-flex gap-4 align-items-center">
+                            <img src="./images/Rectangle (3).png" alt="">
+                            <p>Khushi Raiyani</p>
+                        </div>
+                        <div class="about-text">
+                            <p>"Great service, beautiful flowers, timely delivery. Highly recommend."</p>
+                        </div>
+                        <div class="about-bg-img">
+                            <img src="./images/Snake_Plant 1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="journey-section mt-5 mb-5">
+        <div class="journey-title">
+            <h3>Follw Our Journey</h3>
+        </div>
+        <div class="container mt-4">
+            <div class="row row-gap">
+                <div class="col-lg-3">
+                    <div class="journey-image">
+                        <img src="./images/jou-1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="journey-image">
+                        <img src="./images/jou-2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="journey-image">
+                        <img src="./images/jou-3.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="journey-image">
+                        <img src="./images/jou-4.png" alt="">
+                    </div>
+                </div>
+                <div class="journey-text mt-3">
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <img src="./images/mdi_instagram.png" alt="">
+                        <p>@Rooted.Byasd</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="site-footer">
+        <div class="footer-background">
+            <img src="./images/logo-white.svg" alt="Rooted Logo Background" class="footer-bg-logo">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <img src="./images/logo-white.svg" alt="Rooted Logo" class="mb-3">
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About Us</a></li>
+                            <li><a href="./products.html">Products</a></li>
+                            <li><a href="./testimonials.html">Testimonials</a></li>
+                            <li><a href="./contact.html">Contact Us</a></li>
+                            <li><a href="./terms&condition.html">Terms & Condition</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="footer-subscribe">
+                        <p>By subscribing you agree to with our <a href="#">Privacy Policy</a></p>
+                        <div class="subscribe-form">
+                            <input type="email" placeholder="Enter your email" class="footer-input">
+                            <button class="subscribe-btn">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="copyright"> 2025 RootedbyASD All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuClose = document.getElementById('menuClose');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>

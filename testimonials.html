@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome-link.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('opening-animation-active');
+  });
+</script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header-sections pb-4">
+        <!-- Mobile Header -->
+        <div class="mobile-header d-flex justify-content-between align-items-center px-3 py-2 d-md-none">
+            <a href="./index.html"><img src="./images/header-logo.png" alt="Logo" class="mobile-logo"></a>
+            <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        </div>
+        <!-- Mobile Side Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header d-flex justify-content-between align-items-center">
+                <a href="./index.html"><img src="./images/header-logo.png" alt="Logo" class="mobile-menu-logo"></a>
+                <button id="menuClose">&times;</button>
+            </div>
+            <ul class="mobile-menu-list">
+                <a href="./index.html"><li>Home</li></a>
+                <a href="./about-us.html"><li>About</li></a>
+                <a href="./products.html"><li>Products</li></a>
+                <a href="./contact.html"><li>Contact</li></a>
+                <a href="./testimonials.html"><li>Testimonials</li></a>
+                <a href="./terms&condition.html"><li>Terms & Policies</li></a>
+            </ul>
+        </div>
+        <div class="header-logo text-center d-none d-md-block">
+            <a href="./index.html"><img src="./images/header-logo.png" alt=""></a>
+        </div>
+        <div class="nav-list mt-3 d-none d-md-block">
+            <ul class="d-flex justify-content-center gap-4">
+                <a href="./index.html"><li>Home</li></a>
+                <a href="./about-us.html"><li>About</li></a>
+                <a href="./products.html"><li>Products</li></a>
+                <a href="./contact.html"><li>Contact</li></a>
+                <a href="./testimonials.html"><li>Testimonials</li></a>
+                <a href="./terms&condition.html"><li>Terms & Policies</li></a>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuClose = document.getElementById('menuClose');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    </script>
+    <!-- Banner Section -->
+    <div class="terms-condition-banner-section">
+        <div class="banner-images">
+            <img src="./images/terms&condition-banner.png" alt="">
+        </div>
+    </div>
+    <!-- Testimonial Input Section -->
+    <section class="testimonial-input-section py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-xl-6">
+                    <!-- Avatars Row -->
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <img src="https://randomuser.me/api/portraits/men/10.jpg" class="rounded-circle" width="36" height="36" alt="">
+                        <img src="https://randomuser.me/api/portraits/women/11.jpg" class="rounded-circle" width="36" height="36" alt="">
+                        <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle" width="36" height="36" alt="">
+                        <img src="https://randomuser.me/api/portraits/women/13.jpg" class="rounded-circle" width="36" height="36" alt="">
+                        <img src="https://randomuser.me/api/portraits/men/14.jpg" class="rounded-circle" width="36" height="36" alt="">
+                    </div>
+                    <!-- Heading -->
+                    <h1 class="fw-bold mb-4" style="font-size:2.5rem; color:#6b4632; line-height:1.1;">Come join us with the community to grow your content reach</h1>
+                    <!-- Profile Card with Initials -->
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div id="initials-avatar" class="rounded-circle d-flex align-items-center justify-content-center" style="width:56px; height:56px; background:#e2d8d0; color:#6b4632; font-size:1.7rem; font-weight:bold; box-shadow:0 2px 8px #0001;">
+                            GG
+                        </div>
+                        <div>
+                            <div class="fw-semibold" style="color:#6b4632;">Posting publicly across Google</div>
+                        </div>
+                    </div>
+                    <form class="p-4 rounded shadow-sm bg-white">
+                        <div class="row g-3 mb-2">
+                            <div class="col-md-6">
+                                <input id="firstName" type="text" class="form-control form-control-lg" placeholder="First Name" style="border-radius:12px;">
+                            </div>
+                            <div class="col-md-6">
+                                <input id="lastName" type="text" class="form-control form-control-lg" placeholder="Last Name" style="border-radius:12px;">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control form-control-lg" rows="4" placeholder="Enter Your Opinion" style="border-radius:14px; font-size:1.1rem;"></textarea>
+                        </div>
+                        <button type="submit" class="btn w-auto px-5 py-2" style="background:#6b4632; color:#fff; border-radius:22px; font-weight:500;">Share your content</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Update initials avatar as user types
+            function getInitials(fname, lname) {
+                let f = fname.trim()[0] || '';
+                let l = lname.trim()[0] || '';
+                return (f + l).toUpperCase();
+            }
+            const firstNameInput = document.getElementById('firstName');
+            const lastNameInput = document.getElementById('lastName');
+            const initialsAvatar = document.getElementById('initials-avatar');
+            function updateInitials() {
+                initialsAvatar.textContent = getInitials(firstNameInput.value, lastNameInput.value) || 'GG';
+            }
+            firstNameInput.addEventListener('input', updateInitials);
+            lastNameInput.addEventListener('input', updateInitials);
+        </script>
+    </section>
+    <!-- Testimonial Display Section -->
+    <section class="testimonial-display-section py-5" style="background:#EDE8D0; position:relative;">
+        <!-- Decorative dots left -->
+        <div class="testimonial-dots testimonial-dots-left"></div>
+        <!-- Decorative dots right -->
+        <div class="testimonial-dots testimonial-dots-right"></div>
+        <div class="container position-relative" style="z-index:1;">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4" style="gap:2rem 0;">
+                <div>
+                    <h2 class="fw-bold mb-1" style="color:#654638; font-size:2.5rem; letter-spacing:0.02em;">Our Customer Feedback</h2>
+                    <div class="mb-0" style="color:#964B00; font-size:1.3rem; letter-spacing:0.03em;">Don’t take our word for it. Trust our customers</div>
+                </div>
+                <div class="d-flex gap-2">
+                    <button id="testimonial-prev" class="btn btn-outline-brown px-4 py-2" style="border-color:#964B00; color:#964B00; border-radius:6px; opacity:0.5;">&lt; Previous</button>
+                    <button id="testimonial-next" class="btn btn-outline-brown px-4 py-2" style="border-color:#964B00; color:#964B00; border-radius:6px;">Next &gt;</button>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5 justify-content-center">
+                <!-- Example testimonial card -->
+                <div class="col" style="max-width:800px;">
+                    <div class="testimonial-card p-4 h-100 bg-white rounded-3 border" style="border:1.3px solid #E7EAEC; box-shadow:0 2px 10px #0001;">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="60" height="60" alt="">
+                            <div>
+                                <div class="fw-bold" style="font-size:1.3rem; color:#133240; letter-spacing:0.02em;">Raj Domadiya</div>
+                            </div>
+                            <div class="ms-auto d-flex align-items-center gap-1">
+                                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+                                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+                                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+                                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+                                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-text" style="font-size:1.2rem; color:#133240; letter-spacing:0.04em; line-height:1.45;">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</div>
+                    </div>
+                </div>
+                <!-- Duplicate the above .col for more testimonials, adjusting name, avatar, and text as needed -->
+            </div>
+        </div>
+    </section>                </div>
+                <!-- Repeat above card for more testimonials as needed -->
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-background">
+            <img src="./images/logo-white.svg" alt="Rooted Logo Background" class="footer-bg-logo">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <img src="./images/logo-white.svg" alt="Rooted Logo" class="mb-3">
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About Us</a></li>
+                            <li><a href="./products.html">Products</a></li>
+                            <li><a href="./testimonials.html">Testimonials</a></li>
+                            <li><a href="./contact.html">Contact Us</a></li>
+                            <li><a href="./terms&condition.html">Terms & Condition</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="footer-subscribe">
+                        <p>By subscribing you agree to with our <a href="#">Privacy Policy</a></p>
+                        <div class="subscribe-form">
+                            <input type="email" placeholder="Enter your email" class="footer-input">
+                            <button class="subscribe-btn">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="copyright">© 2025 RootedbyASD All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Loader Overlay -->
+    <div id="page-loader" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:#EDE8D0;display:flex;align-items:center;justify-content:center;transition:opacity 0.5s;">
+      <div style="text-align:center;">
+        <div class="spinner-border" style="width:4rem;height:4rem;color:#964B00;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div style="margin-top:1.5rem;font-size:1.4rem;color:#654638;font-weight:bold;letter-spacing:0.04em;">Loading...</div>
+      </div>
+    </div>
+    <!-- Firebase App (core) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<!-- Firestore -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBQ2DcUbWfy5ev3Nuh4e4c99MMpaqUviGw",
+    authDomain: "rootedbyasd-a0b3d.firebaseapp.com",
+    projectId: "rootedbyasd-a0b3d",
+    storageBucket: "rootedbyasd-a0b3d.firebasestorage.app",
+    messagingSenderId: "19906456085",
+    appId: "1:19906456085:web:0e32cccd06e77db3da3c1c",
+    measurementId: "G-1VDTT967RX"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // Pagination state
+  let testimonialsData = [];
+  let currentPage = 0;
+  const pageSize = 8;
+
+  // Submit testimonial form
+  document.querySelector('.testimonial-input-section form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const opinion = this.querySelector('textarea').value.trim();
+    if (!firstName || !lastName || !opinion) return alert('Please fill all fields.');
+    // Show loader while sending (if not already visible)
+    const loader = document.getElementById('page-loader');
+    loader.style.display = 'flex';
+    loader.style.opacity = '1';
+    this.querySelector('button[type="submit"], button:not([type])').disabled = true;
+    try {
+      await db.collection('testimonials').add({
+        firstName,
+        lastName,
+        opinion,
+        created: new Date()
+      });
+      alert('Thank you for your feedback!');
+      this.reset();
+      document.getElementById('initials-avatar').textContent = 'GG';
+      await fetchAllTestimonials();
+      showTestimonialsPage(0);
+    } catch (err) {
+      alert('Submission failed. Please try again.');
+    } finally {
+      loader.style.opacity = '0';
+      setTimeout(() => loader.style.display = 'none', 500);
+      this.querySelector('button[type="submit"], button:not([type])').disabled = false;
+    }
+  });
+
+  // Fetch all testimonials and store in memory
+  async function fetchAllTestimonials() {
+    testimonialsData = [];
+    const snap = await db.collection('testimonials').orderBy('created', 'desc').get();
+    snap.forEach(doc => testimonialsData.push(doc.data()));
+  }
+
+  // Render testimonials for the current page
+  function showTestimonialsPage(page) {
+    const container = document.querySelector('.testimonial-display-section .row.row-cols-1');
+    if (!container) return;
+    container.innerHTML = '';
+    const start = page * pageSize;
+    const end = start + pageSize;
+    testimonialsData.slice(start, end).forEach(t => {
+      const initials = (t.firstName[0] + t.lastName[0]).toUpperCase();
+      container.innerHTML += `
+        <div class="col" style="max-width:800px;">
+          <div class="testimonial-card p-4 h-100 bg-white rounded-3 border" style="border:1.3px solid #E7EAEC; box-shadow:0 2px 10px #0001;">
+            <div class="d-flex align-items-center mb-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center me-3" style="width:60px; height:60px; background:#e2d8d0; color:#6b4632; font-size:1.7rem; font-weight:bold;">
+                ${initials}
+              </div>
+              <div>
+                <div class="fw-bold" style="font-size:1.3rem; color:#133240; letter-spacing:0.02em;">
+                  ${t.firstName} ${t.lastName}
+                </div>
+              </div>
+              <div class="ms-auto d-flex align-items-center gap-1">
+                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+                <span class="star" style="color:#F8A401; font-size:1.5rem;">&#9733;</span>
+              </div>
+            </div>
+            <div class="testimonial-text" style="font-size:1.2rem; color:#133240; letter-spacing:0.04em; line-height:1.45;">
+              ${t.opinion}
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    // Update pagination buttons
+    document.getElementById('testimonial-prev').disabled = (page === 0);
+    document.getElementById('testimonial-prev').style.opacity = (page === 0) ? '0.5' : '1';
+    document.getElementById('testimonial-next').disabled = (end >= testimonialsData.length);
+    document.getElementById('testimonial-next').style.opacity = (end >= testimonialsData.length) ? '0.5' : '1';
+    currentPage = page;
+  }
+
+  // Pagination button events
+  document.getElementById('testimonial-prev').addEventListener('click', function() {
+    if (currentPage > 0) showTestimonialsPage(currentPage - 1);
+  });
+  document.getElementById('testimonial-next').addEventListener('click', function() {
+    if ((currentPage + 1) * pageSize < testimonialsData.length) showTestimonialsPage(currentPage + 1);
+  });
+
+  // Show loader on page load
+  document.getElementById('page-loader').style.display = 'flex';
+
+  // Hide loader after testimonials are loaded
+  async function showAndLoadTestimonials() {
+    await fetchAllTestimonials();
+    showTestimonialsPage(0);
+    const loader = document.getElementById('page-loader');
+    loader.style.opacity = '0';
+    setTimeout(() => loader.style.display = 'none', 500);
+  }
+  document.addEventListener('DOMContentLoaded', showAndLoadTestimonials);
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
