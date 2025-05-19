@@ -190,17 +190,44 @@
                             <li><a href="./products.html">Products</a></li>
                             <li><a href="./testimonials.html">Testimonials</a></li>
                             <li><a href="./contact.html">Contact Us</a></li>
-                            <li><a href="./terms&condition.html">Terms & Condition</a></li>
+                            <li><a href="./terms&condition.html">Terms & Conditions</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="footer-subscribe">
                         <p>By subscribing you agree to with our <a href="#">Privacy Policy</a></p>
-                        <div class="subscribe-form">
-                            <input type="email" placeholder="Enter your email" class="footer-input">
-                            <button class="subscribe-btn">Subscribe</button>
-                        </div>
+                        <form id="subscribe-form" action="https://formspree.io/f/mblowzpa" method="POST" class="subscribe-form">
+                            <input type="email" name="email" placeholder="Enter your email" class="footer-input" required>
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                            <span id="subscribe-success" style="display:none; color:green; margin-left:10px;">Thank you for subscribing!</span>
+                        </form>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var subscribeForm = document.getElementById('subscribe-form');
+                                var subscribeSuccess = document.getElementById('subscribe-success');
+                                if (subscribeForm) {
+                                    subscribeForm.addEventListener('submit', function(e) {
+                                        e.preventDefault();
+                                        var formData = new FormData(subscribeForm);
+                                        fetch(subscribeForm.action, {
+                                            method: 'POST',
+                                            body: formData,
+                                            headers: { 'Accept': 'application/json' }
+                                        }).then(function(response) {
+                                            if (response.ok) {
+                                                subscribeSuccess.style.display = 'inline';
+                                                subscribeForm.reset();
+                                            } else {
+                                                alert('There was an error. Please try again.');
+                                            }
+                                        }).catch(function() {
+                                            alert('There was an error. Please try again.');
+                                        });
+                                    });
+                                }
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
@@ -213,9 +240,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/share/1BqphqpEDt/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/rooted_byasd?igsh=MXBlYjk5eDV4ODB3YQ==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </div>

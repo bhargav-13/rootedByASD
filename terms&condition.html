@@ -23,69 +23,71 @@
           document.body.classList.add('opening-animation-active');
         });
       </script>
-
-    <!-- Header Section -->
-    <div class="header-sections pb-4">
-        <!-- Mobile Header -->
-        <div class="mobile-header d-flex justify-content-between align-items-center px-3 py-2 d-md-none">
-            <a href="./index.html"><img src="./images/header-logo.png" alt="Logo" class="mobile-logo"></a>
-            <button class="menu-toggle" id="menuToggle">&#9776;</button>
-        </div>
-
-        <!-- Desktop Logo -->
-        <div class="header-logo text-center d-none d-md-block">
-            <a href="./index.html"><img src="./images/header-logo.png" alt=""></a>
-        </div>
-
-        <!-- Desktop Nav List -->
-        <div class="nav-list mt-3 d-none d-md-block">
-            <ul class="d-flex justify-content-center gap-4">
-                <a href="./index.html">
-                    <li>Home</li>
-                </a>
-                <a href="./about-us.html">
-                    <li>About</li>
-                </a>
-                <a href="./products.html">
-                    <li>Products</li>
-                </a>
-                <a href="./contact.html">
-                    <li>Contact</li>
-                </a>
-                <a href="./testimonials.html">
-                    <li>Testimonials</li>
-                </a>
-                <a href="./terms&condition.html">
-                    <li>Terms & Policies</li>
-                </a>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Mobile Side Menu -->
-    <div class="nav-list mt-3 d-none d-md-block">
-            <ul class="d-flex justify-content-center gap-4">
-                <a href="./index.html">
-                    <li>Home</li>
-                </a>
-                <a href="./about-us.html">
-                    <li>About</li>
-                </a>
-                <a href="./products.html">
-                    <li>Products</li>
-                </a>
-                <a href="./contact.html">
-                    <li>Contact</li>
-                </a>
-                <a href="./testimonials.html">
-                    <li>Testimonials</li>
-                </a>
-                <a href="./terms&condition.html">
-                    <li>Terms & Policies</li>
-                </a>
-            </ul>
-        </div>
-    </div>
+      <!-- Header Section -->
+      <div class="header-sections pb-4">
+          <!-- Mobile Header -->
+          <div class="mobile-header d-flex justify-content-between align-items-center px-3 py-2 d-md-none">
+              <a href="./index.html"><img src="./images/header-logo.png" alt="Logo" class="mobile-logo"></a>
+              <button class="menu-toggle" id="menuToggle">&#9776;</button>
+          </div>
+  
+          <!-- Desktop Logo -->
+          <div class="header-logo text-center d-none d-md-block">
+              <a href="./index.html"><img src="./images/header-logo.png" alt=""></a>
+          </div>
+  
+          <!-- Desktop Nav List -->
+          <div class="nav-list mt-3 d-none d-md-block">
+              <ul class="d-flex justify-content-center gap-4">
+                  <a href="./index.html">
+                      <li>Home</li>
+                  </a>
+                  <a href="./about-us.html">
+                      <li>About</li>
+                  </a>
+                  <a href="./products.html">
+                      <li>Products</li>
+                  </a>
+                  <a href="./contact.html">
+                      <li>Contact</li>
+                  </a>
+                  <a href="./testimonials.html">
+                      <li>Testimonials</li>
+                  </a>
+                  <a href="./terms&condition.html">
+                      <li>Terms & Policies</li>
+                  </a>
+              </ul>
+          </div>
+      </div>
+  
+      <!-- Mobile Side Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-header d-flex justify-content-between align-items-center">
+              <a href="./index.html"><img src="./images/header-logo.png" alt="Logo" class="mobile-menu-logo"></a>
+              <button id="menuClose">&times;</button>
+          </div>
+          <ul class="mobile-menu-list">
+              <a href="./index.html">
+                  <li>Home</li>
+              </a>
+              <a href="./about-us.html">
+                  <li>About</li>
+              </a>
+              <a href="./products.html">
+                  <li>Products</li>
+              </a>
+              <a href="./contact.html">
+                  <li>Contact</li>
+              </a>
+              <a href="./testimonials.html">
+                  <li>Testimonials</li>
+              </a>
+              <a href="./terms&condition.html">
+                  <li>Terms & Policies</li>
+              </a>
+          </ul>
+      </div>
 
 
     <div class="terms-condition-banner-section">
@@ -99,7 +101,7 @@
         <div class="container">
             <div class="terms-condition-text">
                 <div class="title-text">
-                    <h3>Terms & Condition</h3>
+                    <h3>Terms & Conditions</h3>
                 </div>
 
                 <div class="detail-text">
@@ -176,17 +178,44 @@
                             <li><a href="./products.html">Products</a></li>
                             <li><a href="./testimonials.html">Testimonials</a></li>
                             <li><a href="./contact.html">Contact Us</a></li>
-                            <li><a href="./terms&condition.html">Terms & Condition</a></li>
+                            <li><a href="./terms&condition.html">Terms & Conditions</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="footer-subscribe">
                         <p>By subscribing you agree to with our <a href="#">Privacy Policy</a></p>
-                        <div class="subscribe-form">
-                            <input type="email" placeholder="Enter your email" class="footer-input">
-                            <button class="subscribe-btn">Subscribe</button>
-                        </div>
+                        <form id="subscribe-form" action="https://formspree.io/f/mblowzpa" method="POST" class="subscribe-form">
+                            <input type="email" name="email" placeholder="Enter your email" class="footer-input" required>
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                            <span id="subscribe-success" style="display:none; color:green; margin-left:10px;">Thank you for subscribing!</span>
+                        </form>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var subscribeForm = document.getElementById('subscribe-form');
+                                var subscribeSuccess = document.getElementById('subscribe-success');
+                                if (subscribeForm) {
+                                    subscribeForm.addEventListener('submit', function(e) {
+                                        e.preventDefault();
+                                        var formData = new FormData(subscribeForm);
+                                        fetch(subscribeForm.action, {
+                                            method: 'POST',
+                                            body: formData,
+                                            headers: { 'Accept': 'application/json' }
+                                        }).then(function(response) {
+                                            if (response.ok) {
+                                                subscribeSuccess.style.display = 'inline';
+                                                subscribeForm.reset();
+                                            } else {
+                                                alert('There was an error. Please try again.');
+                                            }
+                                        }).catch(function() {
+                                            alert('There was an error. Please try again.');
+                                        });
+                                    });
+                                }
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
@@ -199,9 +228,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/share/1BqphqpEDt/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/rooted_byasd?igsh=MXBlYjk5eDV4ODB3YQ==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
