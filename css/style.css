@@ -177,6 +177,7 @@ li {
     padding: 20px;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
+    padding-top: 70px;
 }
 
 .mobile-menu.active {
@@ -185,18 +186,60 @@ li {
 }
 
 .mobile-menu-header {
-    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 15px 20px;
+    z-index: 10000;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mobile-menu-logo {
-    height: 40px;
+    height: 35px;
+    width: auto;
 }
 
 #menuClose {
     background: none;
     border: none;
-    font-size: 28px;
+    font-size: 36px;
     cursor: pointer;
+    color: #654638;
+    line-height: 1;
+    padding: 0 10px;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-list a {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #654638;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-list a:hover,
+.mobile-menu-list a:focus {
+    background-color: #f9f9f9;
+    padding-left: 10px;
+}
+
+.mobile-menu-list li {
+    margin: 0;
+    padding: 0;
 }
 
 /* Desktop styles only */
@@ -1402,11 +1445,12 @@ li {
     margin-bottom: 70px;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .flip-card {
         width: 100%;
         height: auto;
         perspective: 1000px;
+        margin-bottom: 30px; /* Add consistent bottom margin */
     }
 
     .flip-card-inner {
@@ -1415,5 +1459,17 @@ li {
 
     .row-margin {
         margin-bottom: 30px;
+    }
+    
+    .product-card {
+        margin-bottom: 30px; /* Ensure consistent bottom margin for product cards */
+    }
+    
+    .row-gap {
+        row-gap: 30px; /* Match the gap with the margin */
+    }
+    
+    .col-lg-4 {
+        margin-bottom: 0 !important; /* Remove any column bottom margin */
     }
 }
