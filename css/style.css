@@ -380,7 +380,22 @@ li {
     overflow: hidden;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    height: 250px; /* Fixed height for the image container */
+    height: 250px;
+}
+
+@media (max-width: 768px) {
+    .product-images {
+        height: auto;
+        min-height: 0;
+    }
+    .product-images img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+        max-width: 100%;
+        display: block;
+    }
 }
 
 .product-images img {
